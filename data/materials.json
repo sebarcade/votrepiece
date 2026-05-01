@@ -1,0 +1,62 @@
+{
+  "categories": [
+    {
+      "id": "carrelage",
+      "nom": "Carrelage & Céramique",
+      "materiaux": [
+        { "id": "c1", "nom": "Céramique standard", "prixUnitaire": 4.50, "unite": "pi²", "actif": true },
+        { "id": "c2", "nom": "Porcelaine", "prixUnitaire": 8.00, "unite": "pi²", "actif": true },
+        { "id": "c3", "nom": "Pierre naturelle", "prixUnitaire": 15.00, "unite": "pi²", "actif": true },
+        { "id": "c4", "nom": "Mosaïque", "prixUnitaire": 12.00, "unite": "pi²", "actif": true }
+      ]
+    },
+    {
+      "id": "peinture",
+      "nom": "Peinture",
+      "materiaux": [
+        { "id": "p1", "nom": "Peinture standard", "prixUnitaire": 45.00, "unite": "gallon", "actif": true },
+        { "id": "p2", "nom": "Peinture premium (Sherwin-Williams)", "prixUnitaire": 75.00, "unite": "gallon", "actif": true },
+        { "id": "p3", "nom": "Peinture marine (salle de bain)", "prixUnitaire": 65.00, "unite": "gallon", "actif": true }
+      ]
+    },
+    {
+      "id": "plancher",
+      "nom": "Planchers",
+      "materiaux": [
+        { "id": "pl1", "nom": "Plancher stratifié", "prixUnitaire": 3.50, "unite": "pi²", "actif": true },
+        { "id": "pl2", "nom": "Bois franc", "prixUnitaire": 8.00, "unite": "pi²", "actif": true },
+        { "id": "pl3", "nom": "Vinyle de luxe (LVP)", "prixUnitaire": 4.50, "unite": "pi²", "actif": true },
+        { "id": "pl4", "nom": "Bambou", "prixUnitaire": 6.00, "unite": "pi²", "actif": true }
+      ]
+    },
+    {
+      "id": "plomberie",
+      "nom": "Plomberie",
+      "materiaux": [
+        { "id": "pb1", "nom": "Tuyaux PVC (par pied)", "prixUnitaire": 3.00, "unite": "pied", "actif": true },
+        { "id": "pb2", "nom": "Tuyaux cuivre (par pied)", "prixUnitaire": 8.00, "unite": "pied", "actif": true },
+        { "id": "pb3", "nom": "Robinetterie standard", "prixUnitaire": 150.00, "unite": "unité", "actif": true },
+        { "id": "pb4", "nom": "Robinetterie premium", "prixUnitaire": 350.00, "unite": "unité", "actif": true }
+      ]
+    },
+    {
+      "id": "luminaires",
+      "nom": "Luminaires & Électricité",
+      "materiaux": [
+        { "id": "l1", "nom": "Luminaire encastré", "prixUnitaire": 45.00, "unite": "unité", "actif": true },
+        { "id": "l2", "nom": "Luminaire salle de bain", "prixUnitaire": 95.00, "unite": "unité", "actif": true },
+        { "id": "l3", "nom": "Prise de courant", "prixUnitaire": 25.00, "unite": "unité", "actif": true }
+      ]
+    },
+    {
+      "id": "armoires",
+      "nom": "Armoires & Rangement",
+      "materiaux": [
+        { "id": "a1", "nom": "Armoires cuisine standard (pied linéaire)", "prixUnitaire": 250.00, "unite": "pi linéaire", "actif": true },
+        { "id": "a2", "nom": "Armoires cuisine premium (pied linéaire)", "prixUnitaire": 500.00, "unite": "pi linéaire", "actif": true },
+        { "id": "a3", "nom": "Vanité salle de bain 24\"", "prixUnitaire": 350.00, "unite": "unité", "actif": true },
+        { "id": "a4", "nom": "Vanité salle de bain 48\"", "prixUnitaire": 650.00, "unite": "unité", "actif": true }
+      ]
+    }
+  ]
+}

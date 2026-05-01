@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ============================================
+   DESIGN SYSTEM — VOTRE PIÈCE / LUXE
+   Palette : Blanc, Noir, Gris architecturel
+   ============================================ */
+:root {
+  /* Palette principal */
+  --color-blanc: #FFFFFF;
+  --color-noir: #0A0A0A;
+  --color-noir-2: #141414;
+  --color-gris-1: #F7F7F5;   /* fond très doux */
+  --color-gris-2: #EFEFED;   /* séparateurs */
+  --color-gris-3: #D0CFC9;   /* bords discrets */
+  --color-gris-4: #8A8A82;   /* texte muted */
+  --color-gris-5: #3D3D3A;   /* texte secondaire */
+  --color-accent: #1A1A18;   /* accent sombre */
+
+  /* Couleurs utilitaires */
+  --color-text: var(--color-noir);
+  --color-text-muted: var(--color-gris-4);
+  --color-text-light: var(--color-gris-3);
+  --color-bg: var(--color-blanc);
+  --color-bg-soft: var(--color-gris-1);
+  --color-border: var(--color-gris-2);
+  --color-border-dark: var(--color-gris-3);
+
+  /* Admin (conserver couleur pour interface fonctionnelle) */
+  --admin-sidebar: #111111;
+  --admin-sidebar-hover: #1E1E1E;
+  --admin-accent: #3b82f6;
+  --color-primary: #1A1A18;
+  --color-primary-dark: #000000;
+  --color-primary-light: #3D3D3A;
+
+  /* Typographie */
+  --font-title: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Courier New', monospace;
+
+  /* Espacement */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Rayons */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Ombres */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+  --shadow-xl: 0 32px 80px rgba(0,0,0,0.16);
+
+  /* Transitions */
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Conteneur */
+  --container-max: 1320px;
+  --container-pad: 40px;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  outline: none;
+}
+
+/* ============================================
+   TYPOGRAPHIE
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 300; }
+h2 { font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 300; }
+h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 400; }
+h4 { font-size: 1.25rem; font-weight: 400; }
+
+p {
+  line-height: 1.8;
+  color: var(--color-gris-5);
+  font-weight: 300;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gris-4);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+.section {
+  padding: var(--space-24) 0;
+}
+
+.section-sm {
+  padding: var(--space-16) 0;
+}
+
+.section-title {
+  margin-bottom: var(--space-16);
+}
+
+.section-title h2 {
+  margin-bottom: var(--space-4);
+}
+
+.section-title p {
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+/* ============================================
+   LIGNE DÉCORATIVE (remplace les emojis)
+   ============================================ */
+.rule-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.rule-line::before,
+.rule-line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.rule-line.left::before { display: none; }
+.rule-line.left::after { flex: initial; width: 32px; }
+
+/* ============================================
+   BOUTONS — LUXE MINIMALISTE
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 16px 36px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bouton principal — Noir plein */
+.btn-primary {
+  background: var(--color-noir);
+  color: var(--color-blanc);
+  border-color: var(--color-noir);
+}
+.btn-primary:hover {
+  background: var(--color-gris-5);
+  border-color: var(--color-gris-5);
+}
+
+/* Bouton secondaire — Contour noir */
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-noir);
+  color: var(--color-noir);
+}
+.btn-outline:hover {
+  background: var(--color-noir);
+  color: var(--color-blanc);
+}
+
+/* Bouton blanc (sur fond sombre) */
+.btn-white {
+  background: var(--color-blanc);
+  border-color: var(--color-blanc);
+  color: var(--color-noir);
+}
+.btn-white:hover {
+  background: transparent;
+  color: var(--color-blanc);
+}
+
+/* Bouton contour blanc (sur fond sombre) */
+.btn-outline-white {
+  background: transparent;
+  border-color: rgba(255,255,255,0.5);
+  color: var(--color-blanc);
+}
+.btn-outline-white:hover {
+  background: var(--color-blanc);
+  color: var(--color-noir);
+  border-color: var(--color-blanc);
+}
+
+/* Bouton accent (pour les CTA forts) */
+.btn-accent {
+  background: var(--color-noir);
+  color: var(--color-blanc);
+  border-color: var(--color-noir);
+  font-weight: 500;
+}
+.btn-accent:hover {
+  background: transparent;
+  color: var(--color-noir);
+}
+
+.btn-lg {
+  padding: 20px 48px;
+  font-size: 0.9rem;
+}
+
+.btn-sm {
+  padding: 11px 24px;
+  font-size: 0.78rem;
+}
+
+/* ============================================
+   CARDS — MINIMALISTES
+   ============================================ */
+.card {
+  background: var(--color-blanc);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition);
+}
+
+.card:hover {
+  border-color: var(--color-gris-3);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.card-body {
+  padding: var(--space-8);
+}
+
+/* ============================================
+   BADGES — MINIMALISTES
+   ============================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+}
+
+.badge-dark {
+  background: var(--color-noir);
+  color: var(--color-blanc);
+}
+
+.badge-light {
+  background: transparent;
+  color: var(--color-gris-5);
+  border: 1px solid var(--color-border);
+}
+
+.badge-green {
+  background: transparent;
+  color: var(--color-gris-5);
+  border: 1px solid var(--color-border);
+}
+
+.badge-accent {
+  background: transparent;
+  color: var(--color-gris-4);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   FORMULAIRES
+   ============================================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gris-5);
+}
+
+.form-input, .form-textarea, .form-select {
+  padding: 14px 18px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  background: var(--color-blanc);
+  transition: border-color var(--transition);
+  width: 100%;
+  font-weight: 300;
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--color-noir);
+}
+
+.form-input.error, .form-textarea.error {
+  border-color: #C0392B;
+}
+
+.form-error {
+  color: #C0392B;
+  font-size: 0.8rem;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ============================================
+   GRILLES
+   ============================================ */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  :root {
+    --container-pad: 20px;
+    --space-24: 64px;
+    --space-20: 48px;
+  }
+  .btn-lg { padding: 16px 32px; font-size: 0.85rem; }
+}
+
+/* ============================================
+   UTILITAIRES
+   ============================================ */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-primary { color: var(--color-noir); }
+.text-accent { color: var(--color-gris-5); }
+.text-muted { color: var(--color-gris-4); }
+.text-white { color: var(--color-blanc); }
+
+.bg-dark { background: var(--color-noir); }
+.bg-dark-2 { background: var(--color-noir-2); }
+.bg-soft { background: var(--color-gris-1); }
+.bg-green { background: var(--color-gris-1); }
+
+.flex { display: flex; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; }
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--space-8) 0;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-gris-1); }
+::-webkit-scrollbar-thumb { background: var(--color-gris-3); }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* ============================================
+   ICÔNES SVG INLINE — REMPLACENT LES EMOJIS
+   ============================================ */
+.icon-check::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* ============================================
+   ADMINISTRATION — INTERFACE FONCTIONNELLE
+   ============================================ */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #F4F4F2;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background: var(--admin-sidebar);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.admin-main {
+  flex: 1;
+  overflow: hidden;
+}
+
+.admin-header {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-content {
+  padding: 28px;
+}
+
+.admin-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 12px 16px;
+  background: var(--color-gris-1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-gris-4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background: var(--color-gris-1);
+}
+
+.admin-input {
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background: white;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.admin-input:focus {
+  border-color: var(--admin-accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.admin-btn {
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+.admin-btn-primary { background: var(--admin-accent); color: white; }
+.admin-btn-primary:hover { background: #2563eb; }
+.admin-btn-success { background: #111111; color: white; }
+.admin-btn-success:hover { background: #333; }
+.admin-btn-danger { background: #C0392B; color: white; }
+.admin-btn-danger:hover { background: #A93226; }
+.admin-btn-ghost {
+  background: transparent;
+  color: var(--color-gris-4);
+  border: 1px solid var(--color-border);
+}
+.admin-btn-ghost:hover {
+  background: var(--color-gris-1);
+  color: var(--color-text);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-new { background: #DBEAFE; color: #1E40AF; }
+.status-progress { background: #FEF3C7; color: #92400E; }
+.status-done { background: #D1FAE5; color: #065F46; }

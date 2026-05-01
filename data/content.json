@@ -1,0 +1,118 @@
+{
+  "homepage": {
+    "hero": {
+      "titre": "Votre rénovation. Clé en main. Prix juste.",
+      "sousTitre": "Rénovation par pièce et entretien d'immeuble en Mauricie — Sans surprise, sans délai.",
+      "ctaPrimaire": "Obtenir ma soumission gratuite",
+      "ctaSecondaire": "Calculer mon projet"
+    },
+    "stats": {
+      "projetsCompletes": 150,
+      "clientsSatisfaits": 98,
+      "anneesExperience": 10,
+      "garantieMois": 24
+    },
+    "apropos": {
+      "titre": "Pourquoi choisir Votre Pièce ?",
+      "description": "Basée en Mauricie, notre équipe de professionnels certifiés réalise vos projets de rénovation avec précision et dans les délais convenus. Aucune surprise sur la facture finale."
+    }
+  },
+  "salleDeBain": {
+    "titre": "Rénovation Salle de Bain",
+    "description": "Transformez votre salle de bain en un espace moderne et fonctionnel. De la pose de carrelage à l'installation de la plomberie, nous gérons l'ensemble du projet.",
+    "travaux": [
+      "Démolition et préparation",
+      "Plomberie (tuyaux, robinetterie)",
+      "Installation de douche ou bain",
+      "Pose de carrelage et céramique",
+      "Installation de vanité et miroir",
+      "Peinture et finition",
+      "Luminaires et électricité"
+    ],
+    "prixMin": 8000,
+    "prixMax": 35000
+  },
+  "cuisine": {
+    "titre": "Rénovation Cuisine",
+    "description": "Votre cuisine mérite d'être à la hauteur de vos ambitions culinaires. Armoires sur mesure, comptoirs, électroménagers — nous créons la cuisine de vos rêves.",
+    "travaux": [
+      "Démolition et préparation",
+      "Installation d'armoires",
+      "Pose de comptoirs",
+      "Plomberie (évier, lave-vaisselle)",
+      "Électricité et luminaires",
+      "Dosseret",
+      "Plancher",
+      "Peinture et finition"
+    ],
+    "prixMin": 15000,
+    "prixMax": 75000
+  },
+  "salon": {
+    "titre": "Rénovation Salon & Séjour",
+    "description": "Créez un espace de vie chaleureux et accueillant. Planchers, boiseries, foyer, éclairage — chaque détail est soigné pour un résultat qui vous ressemble.",
+    "travaux": [
+      "Planchers (bois, vinyle, stratifié)",
+      "Peinture et finition",
+      "Boiseries et moulures",
+      "Éclairage et luminaires",
+      "Foyer au gaz ou électrique",
+      "Fenêtres et portes intérieures"
+    ],
+    "prixMin": 5000,
+    "prixMax": 25000
+  },
+  "chambre": {
+    "titre": "Rénovation Chambre à Coucher",
+    "description": "Votre chambre est votre sanctuaire. Nous la transformons en un espace reposant et élégant, adapté à vos besoins et à votre style de vie.",
+    "travaux": [
+      "Planchers",
+      "Peinture et finition",
+      "Éclairage",
+      "Garde-robes et rangement",
+      "Portes et fenêtres",
+      "Isolation phonique"
+    ],
+    "prixMin": 3000,
+    "prixMax": 15000
+  },
+  "vr": {
+    "titre": "Rénovation Véhicule Récréatif",
+    "description": "Votre VR mérite autant d'attention que votre maison. Réparations, modernisation et personnalisation — nous redonnons vie à votre véhicule de plaisir.",
+    "travaux": [
+      "Réparation structure et toiture",
+      "Rénovation intérieure (planchers, murs)",
+      "Plomberie et électricité",
+      "Installation de composantes",
+      "Peinture et finition extérieure",
+      "Isolation thermique"
+    ],
+    "prixMin": 2000,
+    "prixMax": 20000
+  },
+  "entretienImmeuble": {
+    "titre": "Entretien d'Immeuble",
+    "description": "Maintenez la valeur de votre immeuble avec nos contrats d'entretien régulier. Corridors, espaces communs, stationnements — nous assurons un entretien professionnel et fiable.",
+    "services": [
+      "Nettoyage des espaces communs",
+      "Entretien des corridors",
+      "Maintenance des stationnements",
+      "Réparations mineures",
+      "Peinture des espaces communs",
+      "Entretien saisonnier"
+    ],
+    "typesContrats": [
+      { "nom": "Mensuel", "description": "Entretien régulier chaque mois" },
+      { "nom": "Trimestriel", "description": "Inspection et entretien aux 3 mois" },
+      { "nom": "Annuel", "description": "Contrat complet avec rabais annuel" }
+    ],
+    "prixParLogement": 35
+  },
+  "contact": {
+    "telephone": "(819) 247-0449",
+    "email": "VotrePiece@gmail.com",
+    "ville": "Shawinigan",
+    "region": "Mauricie",
+    "heures": "Lundi–Vendredi: 8h–17h | Samedi: 9h–14h"
+  }
+}

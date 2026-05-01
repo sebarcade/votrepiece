@@ -1,0 +1,35 @@
+{
+  "tauxHoraire": {
+    "mainOeuvre": 75,
+    "marcheMauricieReference": 95,
+    "description": "Taux horaire en dollars CAD"
+  },
+  "nombreEmployes": {
+    "salleDeBain": 2,
+    "cuisine": 2,
+    "salon": 1,
+    "chambre": 1,
+    "vr": 1,
+    "entretienImmeuble": 3
+  },
+  "durees": {
+    "salleDeBain": { "min": 5, "max": 10, "unite": "jours" },
+    "cuisine": { "min": 7, "max": 14, "unite": "jours" },
+    "salon": { "min": 3, "max": 7, "unite": "jours" },
+    "chambre": { "min": 2, "max": 5, "unite": "jours" },
+    "vr": { "min": 1, "max": 5, "unite": "jours" }
+  },
+  "niveauxFinition": {
+    "economique": { "multiplicateur": 0.8, "label": "Économique" },
+    "standard": { "multiplicateur": 1.0, "label": "Standard" },
+    "hauteGamme": { "multiplicateur": 1.6, "label": "Haut de gamme" }
+  },
+  "avantagesConcurrentiels": {
+    "garantieMois": 24,
+    "delaiMarcheMin": 6,
+    "delaiMarcheMax": 10,
+    "delaiNotreMin": 2,
+    "delaiNotreMax": 4,
+    "economiesPourcentage": 20
+  }
+}

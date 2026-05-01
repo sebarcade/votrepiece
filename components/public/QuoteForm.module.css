@@ -1,0 +1,140 @@
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 4px;
+  background: var(--color-border);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transition: width 0.4s ease;
+}
+
+.stepIndicator {
+  text-align: right;
+  padding: 12px 28px 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.step {
+  padding: 32px 36px;
+}
+
+.stepTitle {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.stepDesc {
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+  font-size: 0.95rem;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.typeBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border-radius: 12px;
+  border: 2px solid var(--color-border);
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.typeBtn:hover {
+  border-color: var(--color-primary);
+  background: var(--color-bg-green);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.typeBtnActive {
+  border-color: var(--color-primary) !important;
+  background: var(--color-bg-green) !important;
+  color: var(--color-primary) !important;
+  box-shadow: var(--shadow-green);
+}
+
+.typeIcon {
+  font-size: 1.75rem;
+}
+
+.stepTextarea {
+  margin-bottom: 8px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.navBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.summaryCard {
+  background: var(--color-bg-soft);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  line-height: 1.9;
+}
+
+.summaryCard h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+
+.guarantee {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.guarantee strong {
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .step { padding: 24px 20px; }
+  .typeGrid { grid-template-columns: repeat(2, 1fr); }
+  .navBtns { flex-direction: column-reverse; gap: 12px; }
+  .navBtns button { width: 100%; justify-content: center; }
+}
