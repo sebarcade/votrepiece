@@ -1,7 +1,7 @@
 {
   "tauxHoraire": {
-    "mainOeuvre": 75,
-    "marcheMauricieReference": 95,
+    "mainOeuvre": 95,
+    "marcheMauricieReference": 125,
     "description": "Taux horaire en dollars CAD"
   },
   "nombreEmployes": {
@@ -14,28 +14,28 @@
   },
   "durees": {
     "salleDeBain": {
-      "min": 5,
-      "max": 10,
+      "min": 2,
+      "max": 60,
       "unite": "jours"
     },
     "cuisine": {
       "min": 7,
-      "max": 14,
+      "max": 60,
       "unite": "jours"
     },
     "salon": {
       "min": 3,
-      "max": 7,
+      "max": 60,
       "unite": "jours"
     },
     "chambre": {
       "min": 2,
-      "max": 5,
+      "max": 60,
       "unite": "jours"
     },
     "vr": {
       "min": 1,
-      "max": 5,
+      "max": 60,
       "unite": "jours"
     }
   },

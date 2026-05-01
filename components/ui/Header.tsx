@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/cuisine', label: 'Cuisine' },
   { href: '/salon', label: 'Salon' },
   { href: '/chambre', label: 'Chambre' },
-  { href: '/entretien-immeuble', label: 'Entretien' },
+  { href: '/vr', label: 'Véhicule Récréatif (VR)' },
 ];
 
 export default function Header() {
