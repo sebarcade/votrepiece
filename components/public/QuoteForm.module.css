@@ -1,52 +1,64 @@
+/* ── Wrapper ── */
 .wrapper {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
-  background: white;
-  border-radius: 20px;
-  box-shadow: var(--shadow-lg);
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
+/* ── Barre de progression ── */
 .progressBar {
-  height: 4px;
-  background: var(--color-border);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
-  transition: width 0.4s ease;
+  background: #FFFFFF;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stepIndicator {
   text-align: right;
-  padding: 12px 28px 0;
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
+  padding: 16px 36px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
   font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
+/* ── Contenu de chaque étape ── */
 .step {
-  padding: 32px 36px;
+  padding: 36px 40px 40px;
 }
 
 .stepTitle {
-  font-size: 1.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
   margin-bottom: 8px;
-  color: var(--color-text);
 }
 
 .stepDesc {
-  color: var(--color-text-muted);
-  margin-bottom: 28px;
-  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.32);
+  margin-bottom: 32px;
+  font-size: 0.88rem;
+  line-height: 1.7;
 }
 
+/* ── Grille de types ── */
 .typeGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 28px;
 }
 
 .typeBtn {
@@ -54,87 +66,209 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 16px 12px;
-  border-radius: 12px;
-  border: 2px solid var(--color-border);
-  background: white;
+  padding: 18px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .typeBtn:hover {
-  border-color: var(--color-primary);
-  background: var(--color-bg-green);
-  color: var(--color-primary);
-  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .typeBtnActive {
-  border-color: var(--color-primary) !important;
-  background: var(--color-bg-green) !important;
-  color: var(--color-primary) !important;
-  box-shadow: var(--shadow-green);
+  border-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  color: #0A0A0A !important;
+  font-weight: 600 !important;
 }
 
 .typeIcon {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.typeBtnActive .typeIcon {
+  opacity: 1;
 }
 
 .stepTextarea {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .field {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
+/* ── Boutons de navigation ── */
 .navBtns {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid var(--color-border);
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* ── Récapitulatif ── */
 .summaryCard {
-  background: var(--color-bg-soft);
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid var(--color-border);
-  font-size: 0.9rem;
-  line-height: 1.9;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .summaryCard h4 {
-  font-size: 0.85rem;
+  font-size: 0.68rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--color-primary);
-  margin-bottom: 12px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
 }
 
+.summaryCard strong {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* ── Garantie ── */
 .guarantee {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.75);
+  padding: 22px 24px;
+  margin: 24px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
 }
 
 .guarantee strong {
-  font-size: 1rem;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 4px;
 }
 
+/* ── Surcharges globales formulaire ── */
+.wrapper :global(.form-label) {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wrapper :global(.form-input),
+.wrapper :global(.form-select),
+.wrapper :global(.form-textarea) {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  padding: 12px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 0;
+}
+
+.wrapper :global(.form-input:focus),
+.wrapper :global(.form-select:focus),
+.wrapper :global(.form-textarea:focus) {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wrapper :global(.form-input::placeholder),
+.wrapper :global(.form-textarea::placeholder) {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.wrapper :global(.form-select) option {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.wrapper :global(.btn-outline) {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.45);
+  padding: 12px 22px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wrapper :global(.btn-outline:hover) {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.wrapper :global(.btn-primary) {
+  background: #FFFFFF;
+  border: none;
+  color: #0A0A0A;
+  padding: 13px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.wrapper :global(.btn-primary:hover) {
+  opacity: 0.88;
+}
+
+.wrapper :global(.btn-primary:disabled) {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.wrapper :global(.btn-accent) {
+  background: #FFFFFF;
+  border: none;
+  color: #0A0A0A;
+  padding: 15px 36px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.wrapper :global(.btn-accent:hover) { opacity: 0.88; }
+.wrapper :global(.btn-accent:disabled) { opacity: 0.35; cursor: not-allowed; }
+
+/* ── Responsive ── */
 @media (max-width: 640px) {
-  .step { padding: 24px 20px; }
+  .step { padding: 24px 20px 28px; }
   .typeGrid { grid-template-columns: repeat(2, 1fr); }
   .navBtns { flex-direction: column-reverse; gap: 12px; }
-  .navBtns button { width: 100%; justify-content: center; }
+  .navBtns > * { width: 100%; text-align: center; justify-content: center; }
 }
