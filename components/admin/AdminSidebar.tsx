@@ -13,7 +13,7 @@ const navItems = [
     children: [
       { href: '/admin/calculateur/tarifs', icon: '💰', label: 'Tarifs & Salaires' },
       { href: '/admin/calculateur/materiaux', icon: '🪨', label: 'Matériaux' },
-      { href: '/admin/calculateur/durees', icon: '📅', label: 'Durées' },
+      { href: '/admin/calculateur/formulaire', icon: '📋', label: 'Options formulaire' },
     ],
   },
 ];

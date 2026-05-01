@@ -20,9 +20,23 @@
     "vr": { "min": 1, "max": 5, "unite": "jours" }
   },
   "niveauxFinition": {
-    "economique": { "multiplicateur": 0.8, "label": "Économique" },
-    "standard": { "multiplicateur": 1.0, "label": "Standard" },
-    "hauteGamme": { "multiplicateur": 1.6, "label": "Haut de gamme" }
+    "economique":  { "multiplicateur": 0.8,  "label": "Économique",    "description": "Matériaux standards" },
+    "standard":    { "multiplicateur": 1.0,  "label": "Standard",      "description": "Rapport qualité/prix optimal" },
+    "hauteGamme":  { "multiplicateur": 1.65, "label": "Haut de gamme", "description": "Matériaux premium" }
+  },
+  "pieces": [
+    { "id": "salleDeBain", "label": "Salle de bain", "basePrice": 12000, "prixM2": 450, "actif": true },
+    { "id": "cuisine",     "label": "Cuisine",        "basePrice": 20000, "prixM2": 600, "actif": true },
+    { "id": "salon",       "label": "Salon",           "basePrice": 7000,  "prixM2": 200, "actif": true },
+    { "id": "chambre",     "label": "Chambre",         "basePrice": 5000,  "prixM2": 150, "actif": true },
+    { "id": "vr",          "label": "Véh. Récréatif",  "basePrice": 5000,  "prixM2": 300, "actif": true }
+  ],
+  "travaux": {
+    "salleDeBain": ["Démolition", "Plomberie", "Carrelage", "Vanité", "Douche/bain", "Peinture", "Luminaires"],
+    "cuisine":     ["Démolition", "Armoires", "Comptoirs", "Plomberie", "Dosseret", "Plancher", "Luminaires"],
+    "salon":       ["Plancher", "Peinture", "Boiseries", "Éclairage", "Fenêtres"],
+    "chambre":     ["Plancher", "Peinture", "Éclairage", "Garde-robes"],
+    "vr":          ["Structure", "Intérieur", "Plomberie", "Électricité", "Finition"]
   },
   "avantagesConcurrentiels": {
     "garantieMois": 24,
