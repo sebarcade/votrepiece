@@ -79,7 +79,7 @@ export default function AdminFormulaireePage() {
     if (!data) return;
     const updated = { ...data };
     const piece = updated.pieces.find((p) => p.id === id);
-    if (piece) (piece as Record<string, unknown>)[field] = value;
+    if (piece) (piece as unknown as Record<string, unknown>)[field] = value;
     setData(updated);
   };
 
