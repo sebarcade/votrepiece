@@ -43,13 +43,25 @@ function SalonAtouts() {
 function SalonHero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgPhoto}>
+      {/* Photo — Desktop */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoDesktop}`}>
         <Image
           src="/salon-hero.png"
           alt="Rénovation salon luxe en Mauricie — Votre Pièce"
           fill priority
           style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
           quality={95}
+        />
+      </div>
+
+      {/* Photo — Mobile portrait */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoMobile}`}>
+        <Image
+          src="/salon-hero-mobile.png"
+          alt="Rénovation salon luxe en Mauricie — Votre Pièce"
+          fill priority
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          quality={90}
         />
       </div>
       <div className={styles.heroOverlay} />

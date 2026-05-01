@@ -43,13 +43,25 @@ function SdbAtouts() {
 function SdbHero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgPhoto}>
+      {/* Photo — Desktop */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoDesktop}`}>
         <Image
           src="/salle-de-bain-hero.png"
           alt="Rénovation salle de bain luxe en Mauricie — Votre Pièce"
           fill priority
           style={{ objectFit: 'cover', objectPosition: 'center center' }}
           quality={95}
+        />
+      </div>
+
+      {/* Photo — Mobile portrait */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoMobile}`}>
+        <Image
+          src="/salle-de-bain-hero-mobile.png"
+          alt="Rénovation salle de bain luxe en Mauricie — Votre Pièce"
+          fill priority
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          quality={90}
         />
       </div>
       <div className={styles.heroOverlay} />

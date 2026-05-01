@@ -19,6 +19,12 @@
   z-index: 0;
 }
 
+/* ---- Version desktop (cachée sur mobile) ---- */
+.bgPhotoDesktop { display: block; }
+
+/* ---- Version mobile (cachée sur desktop) ---- */
+.bgPhotoMobile  { display: none;  }
+
 /* ---- Voile réutilisable pour les pages de service ---- */
 /* Gradient horizontal sur desktop, vertical (vers le bas) sur mobile */
 .heroOverlay {
@@ -298,6 +304,10 @@
   .title { font-size: clamp(2.2rem, 8vw, 3rem); }
   .ctas { flex-direction: column; }
   .badgeGuarantee { top: 80px; right: 16px; }
+
+  /* Photo hero : swap desktop → mobile */
+  .bgPhotoDesktop { display: none;  }
+  .bgPhotoMobile  { display: block; }
 
   /* Stats : passe en grille 2×2 sur mobile */
   .quickStats {

@@ -43,13 +43,25 @@ function ChAmbreAtouts() {
 function ChAmbreHero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgPhoto}>
+      {/* Photo — Desktop */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoDesktop}`}>
         <Image
           src="/chambre-hero.png"
           alt="Rénovation chambre luxe en Mauricie — Votre Pièce"
           fill priority
           style={{ objectFit: 'cover', objectPosition: 'center 35%' }}
           quality={95}
+        />
+      </div>
+
+      {/* Photo — Mobile portrait */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoMobile}`}>
+        <Image
+          src="/chambre-hero-mobile.png"
+          alt="Rénovation chambre luxe en Mauricie — Votre Pièce"
+          fill priority
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          quality={90}
         />
       </div>
       <div className={styles.heroOverlay} />

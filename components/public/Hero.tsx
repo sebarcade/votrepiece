@@ -11,8 +11,8 @@ export default function Hero({ data }: HeroProps) {
 
   return (
     <section className={styles.hero}>
-      {/* Photo de fond — intérieur avec logo sur le mur */}
-      <div className={styles.bgPhoto}>
+      {/* Photo de fond — Desktop */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoDesktop}`}>
         <Image
           src="/hero-wall.png"
           alt="Votre Pièce — Rénovation de prestige en Mauricie"
@@ -20,6 +20,18 @@ export default function Hero({ data }: HeroProps) {
           priority
           style={{ objectFit: 'cover', objectPosition: 'center center' }}
           quality={95}
+        />
+      </div>
+
+      {/* Photo de fond — Mobile (portrait optimisé) */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoMobile}`}>
+        <Image
+          src="/hero-home-mobile.png"
+          alt="Votre Pièce — Rénovation de prestige en Mauricie"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          quality={90}
         />
       </div>
 

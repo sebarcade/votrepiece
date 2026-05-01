@@ -43,13 +43,25 @@ function CuisineAtouts() {
 function CuisineHero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgPhoto}>
+      {/* Photo — Desktop */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoDesktop}`}>
         <Image
           src="/cuisine-hero.png"
           alt="Rénovation cuisine luxe en Mauricie — Votre Pièce"
           fill priority
           style={{ objectFit: 'cover', objectPosition: 'center center' }}
           quality={95}
+        />
+      </div>
+
+      {/* Photo — Mobile portrait */}
+      <div className={`${styles.bgPhoto} ${styles.bgPhotoMobile}`}>
+        <Image
+          src="/cuisine-hero-mobile.png"
+          alt="Rénovation cuisine luxe en Mauricie — Votre Pièce"
+          fill priority
+          style={{ objectFit: 'cover', objectPosition: 'center center' }}
+          quality={90}
         />
       </div>
       <div className={styles.heroOverlay} />
