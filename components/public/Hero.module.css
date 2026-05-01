@@ -19,6 +19,21 @@
   z-index: 0;
 }
 
+/* ---- Voile réutilisable pour les pages de service ---- */
+/* Gradient horizontal sur desktop, vertical (vers le bas) sur mobile */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to left,
+    rgba(5, 5, 5, 0.82) 0%,
+    rgba(5, 5, 5, 0.55) 38%,
+    rgba(5, 5, 5, 0.12) 65%,
+    transparent 100%
+  );
+}
+
 /* ---- Voile : transparent à gauche (logo visible), dense à l'extrême droite (texte lisible) ---- */
 .bgOverlay {
   position: absolute;
@@ -264,14 +279,49 @@
   .content {
     justify-content: flex-start;
     align-items: flex-end;
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 48px;
   }
   .bgOverlay {
-    background: linear-gradient(to top, rgba(5,5,5,0.75) 0%, rgba(5,5,5,0.25) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(5,5,5,0.80) 0%, rgba(5,5,5,0.30) 60%, transparent 100%);
+  }
+  /* Overlay pages de service : adapté mobile (gradient vertical) */
+  .heroOverlay {
+    background: linear-gradient(
+      to top,
+      rgba(5, 5, 5, 0.85) 0%,
+      rgba(5, 5, 5, 0.45) 55%,
+      rgba(5, 5, 5, 0.08) 100%
+    );
   }
   .textBlock { width: 100%; }
   .title { font-size: clamp(2.2rem, 8vw, 3rem); }
   .ctas { flex-direction: column; }
-  .badgeGuarantee { top: 16px; right: 16px; }
+  .badgeGuarantee { top: 80px; right: 16px; }
+
+  /* Stats : passe en grille 2×2 sur mobile */
+  .quickStats {
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  .statDivider { display: none; }
+  .quickStat {
+    width: 50%;
+  }
+  .statInner { padding: 0 8px 0 0; }
+  .quickStat:first-child .statInner { padding-left: 0; }
+  /* Colonne droite : séparateur visuel gauche */
+  .quickStat:nth-child(2),
+  .quickStat:nth-child(4) {
+    border-left: 1px solid rgba(255,255,255,0.12);
+  }
+  .quickStat:nth-child(2) .statInner,
+  .quickStat:nth-child(4) .statInner {
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statVal { font-size: 1.2rem; }
+  .statLabel { font-size: 0.58rem; }
 }

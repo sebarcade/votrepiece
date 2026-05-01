@@ -14,9 +14,9 @@ function CuisineAtouts() {
     { num: '04', titre: 'Dosseret & îlot', desc: 'Carrelage, verre, béton ciré — dosserets signature et îlots centraux sur mesure pour une cuisine fonctionnelle.' },
   ];
   return (
-    <section style={{ background: '#0A0A0A', padding: '96px 0' }}>
+    <section style={{ background: '#0A0A0A', padding: 'clamp(48px, 8vw, 96px) 0' }}>
       <div className="container">
-        <div style={{ marginBottom: '64px' }}>
+        <div style={{ marginBottom: 'clamp(32px, 5vw, 64px)' }}>
           <p style={{ fontFamily: "'DM Sans',sans-serif", fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '14px' }}>
             Notre expertise
           </p>
@@ -52,10 +52,7 @@ function CuisineHero() {
           quality={95}
         />
       </div>
-      <div style={{
-        position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(to left, rgba(5,5,5,0.82) 0%, rgba(5,5,5,0.55) 38%, rgba(5,5,5,0.10) 65%, transparent 100%)',
-      }} />
+      <div className={styles.heroOverlay} />
 
       <div className={styles.badgeGuarantee}>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>

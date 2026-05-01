@@ -498,8 +498,16 @@
   .result     { position: static; }
 }
 
+@media (max-width: 768px) {
+  .section  { padding: 56px 0; }
+  .header   { margin-bottom: 36px; }
+}
+
 @media (max-width: 600px) {
+  .section      { padding: 40px 0; }
   .roomGrid     { grid-template-columns: repeat(2, 1fr); }
-  .finitionGrid { grid-template-columns: 1fr; }
-  .step         { padding: 24px; }
+  .finitionGrid { grid-template-columns: repeat(2, 1fr); }
+  .step         { padding: 20px 16px; }
+  .roomBtn      { padding: 16px 8px; gap: 7px; }
+  .roomLabel    { font-size: 0.6rem; }
 }

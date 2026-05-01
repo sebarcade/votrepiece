@@ -1,0 +1,42 @@
+/* ============================================
+   SERVICES GRID — RESPONSIVE
+   ============================================ */
+
+.sectionHeader {
+  margin-bottom: clamp(32px, 5vw, 64px);
+}
+
+/* Grille 3 colonnes avec "bordures" via background */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #EFEFED;
+  border: 1px solid #EFEFED;
+}
+
+/* Carte service */
+.card {
+  display: block;
+  background: #FFFFFF;
+  padding: clamp(24px, 4vw, 40px);
+  text-decoration: none;
+  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta {
+  text-align: center;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 28px 20px; }
+}

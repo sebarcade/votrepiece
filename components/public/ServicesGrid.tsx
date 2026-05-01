@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import gridStyles from './ServicesGrid.module.css';
 
 /* Icônes SVG architecturales — remplacent les emojis */
 const IconBath = () => (
@@ -121,7 +122,7 @@ export default function ServicesGrid() {
       <div className="container">
 
         {/* En-tête de section */}
-        <div style={{ marginBottom: '64px' }}>
+        <div className={gridStyles.sectionHeader}>
           <p className="eyebrow" style={{ marginBottom: '16px' }}>Nos services</p>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
@@ -140,26 +141,12 @@ export default function ServicesGrid() {
         </div>
 
         {/* Grille de services */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1px',
-          background: '#EFEFED',
-          border: '1px solid #EFEFED',
-        }}>
+        <div className={gridStyles.grid}>
           {services.map((service) => (
             <Link
               key={service.href}
               href={service.href}
-              style={{
-                display: 'block',
-                background: '#FFFFFF',
-                padding: '40px',
-                textDecoration: 'none',
-                transition: 'background 0.3s ease',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
+              className={gridStyles.card}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.background = service.color;
               }}
@@ -241,7 +228,7 @@ export default function ServicesGrid() {
         </div>
 
         {/* CTA centré */}
-        <div style={{ textAlign: 'center', marginTop: '48px' }}>
+        <div className={gridStyles.cta}>
           <Link href="/soumission" className="btn btn-primary">
             Demander une soumission gratuite
           </Link>

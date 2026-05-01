@@ -33,7 +33,7 @@ export default function Header() {
             alt="Votre Pièce"
             width={540}
             height={162}
-            style={{ width: 'auto', height: '120px', objectFit: 'contain' }}
+            className={styles.logoImg}
             priority
           />
         </Link>

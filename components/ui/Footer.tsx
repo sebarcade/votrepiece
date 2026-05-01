@@ -31,7 +31,7 @@ export default function Footer() {
       }} />
 
       {/* ── Corps principal ── */}
-      <div className="container" style={{ padding: '80px 0 48px' }}>
+      <div className="container" style={{ padding: 'clamp(48px, 7vw, 80px) 0 clamp(32px, 5vw, 48px)' }}>
         <div style={{
           display: 'grid',
           gridTemplateColumns: '2fr 1fr 1fr 1.4fr',
@@ -48,6 +48,7 @@ export default function Footer() {
                 alt="Votre Pièce"
                 width={480}
                 height={144}
+                id="footerLogoImg"
                 style={{ width: 'auto', height: '114px', objectFit: 'contain', filter: 'brightness(0) invert(1)', opacity: 0.85 }}
               />
             </Link>
@@ -271,6 +272,10 @@ export default function Footer() {
         @media (max-width: 640px) {
           footer .container > div:first-child {
             grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+          #footerLogoImg {
+            height: 80px !important;
           }
         }
       `}</style>
